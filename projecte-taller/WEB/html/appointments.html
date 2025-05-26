@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Visita</title>
+    <link rel="stylesheet" href="../css/appointments.css">
+    <script src="../js/appointments.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../img/Logo.jpg" alt="Hospital Logo">
+            <h1>Hospital Hemshof</h1>
+        </div>
+        <nav>
+            <ul>
+            <li><a href="hospital.html">Hospitals</a></li>
+            <li><a href="areas.html">Area</a></li>
+            <li><a href="patient.html">Pacients</a></li>
+            <li><a href="staff.html">Personal</a></li>
+            <li><a href="appointments.html">Cites</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>FORMULARI DE VISITA</h1>
+    <form id="appointment-form">
+        <div>
+            <label for="pacient">ID Pacient:</label>
+            <input type="number" name="pacient" id="pacient" required min="1" max="999999">
+        </div>
+
+        <div>
+            <label for="area">Codi Àrea:</label>
+            <input type="number" name="area" id="area" required min="0" max="10">
+        </div>
+
+        <div>
+            <label for="cif">CIF Hospital:</label>
+            <input type="text" name="cif" id="cif" required minlength="9" maxlength="9">
+        </div>
+
+        <div>
+            <label for="inici">Inici (data i hora):</label>
+            <input type="datetime-local" name="inici" id="inici" required>
+        </div>
+
+        <div>
+            <label for="final">Final (data i hora):</label>
+            <input type="datetime-local" name="final" id="final" required>
+        </div>
+
+        <input type="submit" value="Registrar">
+    </form>
+
+    <h2>Llista de Visites</h2>
+    <ul id="visites-lista"></ul>
+</body>
+</html>

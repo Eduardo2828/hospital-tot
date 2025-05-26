@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital - Contacte</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../img/Logo.jpg" alt="Hospital Logo">
+            <h1>Hospital Hemshof</h1>
+        </div>
+        <nav>
+            <ul>
+            <li><a href="hospital.html">Hospitals</a></li>
+            <li><a href="areas.html">Area</a></li>
+            <li><a href="patient.html">Pacients</a></li>
+            <li><a href="staff.html">Personal</a></li>
+            <li><a href="appointments.html">Cites</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section>
+            <h2>Formulari de contacte</h2>
+            <form action="#" method="post">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" placeholder="Introdueix el teu nom" required minlength="2" maxlength="12">
+
+                <label for="email">Correu electrònic:</label>
+                <input type="email" id="email" name="email" placeholder="exemple@gmail.com" required minlength="6" maxlength="30">
+
+                <label for="missatge">Missatge:</label>
+                <textarea id="missatge" name="missatge" placeholder="Escriu el teu missatge" required minlength="10" maxlength="500"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Adreça Física</h2>
+            <address>
+                Hospital Hemshof<br>
+                Carrer del aprobat, 10<br>
+                08520 Excel·lència<br>
+                Telèfon: <a href="tel:+34633194477">633 19 44 77</a><br>
+                Correu: <a href="mailto:hemshof@hospital.cat">hemshof@hospital.cat</a>
+            </address>
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.8499060686813!2d-4.649426125500568!3d36.50948508403551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd731f9197e3850d%3A0xf43939d8cd8cb937!2sEXCELENTE%202021!5e0!3m2!1sca!2ses!4v1747244450255!5m2!1sca!2ses" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0; border-radius:12px; box-shadow: 0 0 10px rgba(255,255,255,0.2);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <aside id="aside2">
+            <article>
+                <h3>Horari</h3>
+                <p>Dilluns a Divendres de 8:00 a 23:00 i els caps de setmana de 15:00 a 20:00</p>
+            </article>
+        </aside>
+
+        <aside id="aside3">
+            <article>
+                <h3>Segueix-nos</h3>
+                <div class="xarxes">
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="../IMG/instagram.avif" alt="Instagram">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="../IMG/twitter.jpg" alt="Twitter">
+                    </a>
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="../IMG/facebook.jpg" alt="Facebook">
+                    </a>
+                </div>
+            </article>
+        </aside>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Àrees Hospitalàries</title>
+    <link rel="stylesheet" href="../css/areas.css">
+    <script src="../js/areas.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../img/Logo.jpg" alt="Hospital Logo">
+            <h1>Hospital Hemshof</h1>
+        </div>
+        <nav>
+            <ul>
+            <li><a href="hospital.html">Hospitals</a></li>
+            <li><a href="areas.html">Area</a></li>
+            <li><a href="patient.html">Pacients</a></li>
+            <li><a href="staff.html">Personal</a></li>
+            <li><a href="appointments.html">Cites</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>    
+    <h1>Àrees Hospitalàries</h1>
+
+    <form id="areaForm" class="area-form">
+        <label for="Codi">Codi:</label>
+        <input type="text" id="Codi" name="Codi" required>
+
+        <label for="Nom">Nom:</label>
+        <input type="text" id="Nom" name="Nom" required>
+
+        <label for="Capacitat">Capacitat:</label>
+        <input type="number" id="Capacitat" name="Capacitat" required>
+
+        <label for="Horari">Horari:</label>
+        <input type="text" id="Horari" name="Horari" required>
+        
+        <label for="CIF_Hospital">CIF Hospital:</label>
+        <input type="text" id="CIF_Hospital" name="CIF_Hospital" required>
+
+        <button type="submit">Afegir Àrea</button>
+    </form>
+
+    <hr>
+
+    <div class="area-grid" id="area-list"></div>
+</body>
+</html>

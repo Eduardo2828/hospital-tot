@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Pacients</title>
+    <link rel="stylesheet" href="../css/patient.css">
+    <script src="../js/patients.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../img/Logo.jpg" alt="Hospital Logo">
+            <h1>Hospital Hemshof</h1>
+        </div>
+        <nav>
+            <ul>
+            <li><a href="hospital.html">Hospitals</a></li>
+            <li><a href="areas.html">Area</a></li>
+            <li><a href="patient.html">Pacients</a></li>
+            <li><a href="staff.html">Personal</a></li>
+            <li><a href="appointments.html">Cites</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Llista de pacients</h1>
+
+    <div class="patient-container" id="patient-list"></div>
+
+    <h1>Afegeix un nou pacient</h1>
+    <form id="patientForm">
+        <input type="text" id="ID" placeholder="ID del pacient" required>
+        <input type="text" id="Nom" placeholder="Nom" required>
+        <input type="text" id="Cognoms" placeholder="Cognoms" required>
+        <input type="date" id="DataNaixement" required>
+        <input type="text" id="Telefono" placeholder="Telefono" required>
+        <input type="email" id="Correu" placeholder="Correu electrònic" required>
+        <input type="text" id="Antecedents" placeholder="Antecedents (separats per comes)">
+        <button type="submit">Afegir pacient</button>
+    </form>
+</body>
+</html>

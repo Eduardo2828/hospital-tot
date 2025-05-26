@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #c2f0e7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #064635;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #00b39f;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,179,159,0.4);
+  transition: transform 0.3s ease;
+}
+
+#logo img:hover {
+  transform: scale(1.1);
+}
+
+#logo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #007a66;
+  user-select: none;
+  text-shadow: 1px 1px 3px rgba(0,123,102,0.4);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #007a66;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  box-shadow: inset 0 0 0 0 transparent;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #00b39f;
+  color: white;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0,179,159,0.5);
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #007a66;
+  text-align: center;
+  max-width: 900px;
+  user-select: none;
+  text-shadow: 1px 1px 3px rgba(0,123,102,0.5);
+}
+
+section {
+  width: 100%;
+  max-width: 700px;
+  background: #e0f7f3;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,100,70,0.18);
+  padding: 30px 35px;
+  margin-bottom: 40px;
+  color: #02523a;
+  user-select: none;
+}
+
+/* CANVI PRINCIPAL: reduïm el max-width del formulari i padding */
+form#medicForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: space-between;
+  max-width: 500px; /* abans no hi havia, ara per fer-lo més petit */
+  padding: 20px; /* menys padding per fer-lo més compacte */
+  background: #e0f7f3;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgb(0 100 70 / 0.15);
+  color: #02523a;
+}
+
+form#medicForm label {
+  flex: 1 1 100%;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #02523a;
+  margin-bottom: 6px;
+}
+
+form#medicForm input[type="text"],
+form#medicForm input[type="number"],
+form#medicForm input[type="date"],
+form#medicForm input[type="email"],
+form#medicForm input[type="datetime-local"] {
+  flex: 1 1 48%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 2px solid #00b39f;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form#medicForm input[type="text"]:focus,
+form#medicForm input[type="number"]:focus,
+form#medicForm input[type="date"]:focus,
+form#medicForm input[type="email"]:focus,
+form#medicForm input[type="datetime-local"]:focus {
+  border-color: #007a66;
+  outline: none;
+  box-shadow: 0 0 10px #00b39faa;
+}
+
+form#medicForm input#Certificats {
+  flex-basis: 100%;
+}
+
+form#medicForm button[type="submit"] {
+  flex-basis: 100%;
+  background: #00b39f;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  user-select: none;
+  box-shadow: 0 6px 15px rgba(0,179,159,0.45);
+}
+
+form#medicForm button[type="submit"]:hover,
+form#medicForm button[type="submit"]:focus {
+  background: #007a66;
+  transform: scale(1.07);
+  box-shadow: 0 8px 18px rgba(0,123,102,0.6);
+  outline: none;
+}
+
+#missatge {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #02523a;
+  text-align: center;
+  min-height: 1.4em;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  color: #02523a;
+  font-weight: 600;
+}
+
+.staff-grid > div {
+  background: #e0f7f3;
+  padding: 22px 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,100,70,0.18);
+  transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.staff-grid > div:hover {
+  background-color: #00b39f33;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,179,159,0.4);
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: none;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  #logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  #logo h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    max-width: 100%;
+    padding: 25px 20px;
+  }
+
+  form#medicForm input[type="text"],
+  form#medicForm input[type="number"],
+  form#medicForm input[type="date"],
+  form#medicForm input[type="email"],
+  form#medicForm input[type="datetime-local"] {
+    flex-basis: 100%;
+  }
+
+  form#medicForm {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  form#medicForm button[type="submit"] {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+}

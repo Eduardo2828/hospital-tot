@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8" />
+    <title>Personal no mèdic</title>
+    <link rel="stylesheet" href="../css/no_medics.css" />
+    <script src="../js/no_medics.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../img/Logo.jpg" alt="Hospital Logo">
+            <h1>Hospital Hemshof</h1>
+        </div>
+        <nav>
+            <ul>
+            <li><a href="hospital.html">Hospitals</a></li>
+            <li><a href="areas.html">Area</a></li>
+            <li><a href="patient.html">Pacients</a></li>
+            <li><a href="staff.html">Personal</a></li>
+            <li><a href="appointments.html">Cites</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Personal no mèdic</h1>
+
+    <section>
+        <h2>Afegir no mèdic</h2>
+        <form id="noMedicForm">
+            <label for="Codi">Codi Empleat</label>
+            <input type="text" id="Codi" required />
+
+            <label for="Nom">Nom</label>
+            <input type="text" id="Nom" required />
+
+            <label for="Cognoms">Cognoms</label>
+            <input type="text" id="Cognoms" required />
+
+            <label for="Salari">Salari (€)</label>
+            <input type="number" id="Salari" required />
+
+            <label for="DataContracte">Data Contracte (YYYY-MM-DD)</label>
+            <input type="date" id="DataContracte" required />
+
+            <label for="Telefono">Telèfon</label>
+            <input type="text" id="Telefono" required />
+
+            <label for="Correu">Correu</label>
+            <input type="email" id="Correu" required />
+
+            <label for="CIF_Hospital">CIF Hospital</label>
+            <input type="text" id="CIF_Hospital" required />
+
+            <label for="Departament">Departament</label>
+            <input type="text" id="Departament" required />
+
+            <label for="Tasques">Tasques (separats per comes)</label>
+            <input type="text" id="Tasques" placeholder="Tasca A, Tasca B" />
+
+            <button type="submit">Afegir</button>
+        </form>
+        <p id="missatge"></p>
+    </section>
+
+    <section>
+        <h2>Llista de Personal no Mèdic</h2>
+        <div id="no-medics-container" class="staff-grid"></div>
+    </section>
+</body>
+</html>

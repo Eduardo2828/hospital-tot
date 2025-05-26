@@ -1,0 +1,47 @@
+version: '3.9'
+
+services:
+  database:
+    build:
+      context: .
+      dockerfile: Dockerfile 
+    container_name: hospital-container
+    environment:
+      MYSQL_ROOT_PASSWORD: Educem00.
+      MYSQL_DATABASE: hospital-projecte
+    ports:
+      - "3307:3306"
+    networks:
+      app-network:
+        ipv4_address: 192.168.1.100
+
+  web:
+    build:
+      context: ./WEB 
+      dockerfile: Dockerfile
+    container_name: web-container
+    ports:
+      - "8080:80"
+    networks:
+      app-network:
+        ipv4_address: 192.168.1.101
+
+  api:
+    build:
+      context: ./api 
+      dockerfile: Dockerfile
+    container_name: api-container
+    ports:
+      - "5000:5000"
+    networks:
+      app-network:
+        ipv4_address: 192.168.1.102
+    depends_on:
+      - database
+
+networks:
+  app-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.1.0/24

@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #c2f0e7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #064635;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #00b39f;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#logo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #007a66;
+  user-select: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #007a66;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #00b39f;
+  color: white;
+  outline: none;
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+section {
+  background: #e0f7f3;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgb(0 100 70 / 0.15);
+  padding: 25px 30px;
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #02523a;
+  user-select: none;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #007a66;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #02523a;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 2px solid #00b39f;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  border-color: #007a66;
+  outline: none;
+  box-shadow: 0 0 8px #00b39faa;
+}
+
+form textarea {
+  min-height: 100px;
+}
+
+form button[type="submit"] {
+  margin-top: 10px;
+  background: #00b39f;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+  background: #007a66;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgb(0 100 70 / 0.4);
+  outline: none;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.6;
+  font-weight: 600;
+  color: #02523a;
+  user-select: none;
+}
+
+address a {
+  color: #007a66;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+address a:hover,
+address a:focus {
+  color: #00b39f;
+  outline: none;
+}
+
+.map-container {
+  margin-top: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgb(0 100 70 / 0.15);
+}
+
+aside#aside2,
+aside#aside3 {
+  background: #e0f7f3;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgb(0 100 70 / 0.15);
+  padding: 20px 25px;
+  color: #02523a;
+  font-weight: 600;
+  max-width: 280px;
+  user-select: none;
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+aside#aside2 h3,
+aside#aside3 h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007a66;
+  margin-bottom: 10px;
+}
+
+.xarxes {
+  display: flex;
+  gap: 15px;
+}
+
+.xarxes a img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.xarxes a img:hover,
+.xarxes a img:focus {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px #00b39fbb;
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  aside#aside2,
+  aside#aside3 {
+    max-width: 100%;
+    flex: none;
+  }
+  section {
+    flex: none;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 450px) {
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+  #logo img {
+    width: 50px;
+    height: 50px;
+  }
+  #logo h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  form button[type="submit"] {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
